@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('header') -%>
+    <h2><%= person %></h2>
+    <h2><%= data.age %></h2>
+    <h2>hobbie：</h2>
+    <ul>
+      <% data.hobbie.forEach((item)=>{ %>
+      <li><%= item %></li>
+      <% }) %>
+    </ul>
+    <!-- formdata处理数据 -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <h2>ejs模板引擎</h2>
+      <input type="file" name="logo" />
+      <input type="submit" value="提交" />
+    </form>
+  </body>
+</html>

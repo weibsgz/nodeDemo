@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="GBK" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="//asserts.xcarimg.com/resource/common/jquery-1.8.3.min.js"
+    ></script>
+  </head>
+  <body>
+    this. is index.html
+    <script>
+      //URL 10.200.16.100 anywhere启动的域名 所以服务端也可以设置这个域名保持同源，
+      //如果服务端随便起域名，需要设置允许跨域
+      const url = 'http://10.200.16.100:4000/getAutoHome'
+      $.ajax({
+        url: url,
+        success: function (res) {
+          console.log(res)
+        },
+      })
+    </script>
+  </body>
+</html>

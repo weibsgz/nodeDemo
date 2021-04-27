@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- app.use(express.static('./public'))  因为设置了public为静态资源根目录所以可以这么引入public下的资源 -->
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script
+      type="text/javascript"
+      src="//asserts.xcarimg.com/resource/common/jquery-1.8.3.min.js"
+    ></script>
+
+    <script src="/assets/todo-list.js"></script>
+  </head>
+  <body>
+    <div id="todo-table">
+      <form>
+        <input type="text" name="item" placeholder="add new item.." required />
+        <button type="submit">Add Item</button>
+      </form>
+
+      <ul>
+        <% todos.forEach((todo)=>{ %>
+        <li><%= todo.item %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
