@@ -4,10 +4,8 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const mongoose = require('mongoose')
 
-//链接mlab.com  其中链接是注册账号后给的一个新手数据库
-mongoose.connect(
-  'mongodb+srv://weibsgz:wb123456@cluster0.x58m1.mongodb.net/Cluster0?retryWrites=true&w=majority'
-)
+//链接mlab.com  其中链接是注册账号后给的一个新手数据库 选择connection 第二个选项 connecct your application 给你生成个连接填入下边
+mongoose.connect('xxxxxxxxxxxxxxxxx')
 //Mongoose 的一切始于 Schema。每个 schema 都会映射到一个 MongoDB collection
 const Schema = mongoose.Schema
 
