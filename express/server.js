@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false })) //form数据
 //app.use(bodyParser.json()) //如果需要发送JSON数据
 
 //获取参数 query http://localhost:3333/?a=1
